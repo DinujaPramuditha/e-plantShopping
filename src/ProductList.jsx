@@ -10,15 +10,15 @@ function ProductList({ onHomeClick }) {
     const dispatch = useDispatch();
     const [addedToCart, setAddedToCart] = useState({});
 
-    // ✅ Redux store එකෙන් cart items ලබා ගන්න
+    
     const cartItems = useSelector(state => state.cart.items);
 
-    // ✅ Cart එකේ ඇති total quantity එක ගණනය කරන්න
+    
     const calculateTotalQuantity = () => {
         return cartItems ? cartItems.reduce((total, item) => total + item.quantity, 0) : 0;
     };
 
-    // ✅ මෙතන style objects define කරන්න (මෙයයි අතුරුදහන් වූයේ)
+    
     const styleObj = {
         backgroundColor: '#4CAF50',
         color: '#fff!important',
